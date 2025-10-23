@@ -1,0 +1,14 @@
+{% block extra_head %}{% endblock %}
+DjangoWeb
+{% if user.is_authenticated %}
+Inicio
+Cerrar sesión
+{% else %}
+Login
+{% endif %}
+{# 🔔 Mensajes globales (éxito, error, info) #} {% if messages %}
+{% for message in messages %}
+{{ message }}
+{% endfor %}
+{% endif %} {% block content %}{% endblock %}
+{% block extra_js %}{% endblock %}
